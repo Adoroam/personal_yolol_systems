@@ -1,9 +1,6 @@
-if :ScanResults > 0 then goto 2 end goto 7
-:Index = 0 :Scan = 0
-:Ore  = :Material
-
-
-if ++:Index >= :ScanResults then goto 1 end goto 3
-if :Scanner==1 AND :ScanResults==0 then goto 8 else goto 9 end
-:Scan = 1 :Ore = "scanning..."
-if :Scanner==0 then :Scan = 0 :Ore = "Scanner Offline" end goto1
+if :scanner!=1 then :scan=0 :resources="Scanner\nOffline" goto 1 end
+if :scanout>0 then goto 3 end :scan=1 :resources="scanning..." goto 1
+:i=():scanout-1) :resources="\n"
+if i> -1 then :resources+=:material + "\n" :i-- goto 4 end
+:resources+="done."
+if :scanout>0 AND :i==-1 then goto 6 end goto 1

@@ -1,0 +1,4 @@
+if :scA==1 then :scB=1 goto1 end :scB=0 goto1
+
+// :scA        | MPS Active (boolean)
+// :scB        | MPS Scan (boolean)

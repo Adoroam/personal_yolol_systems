@@ -1,0 +1,10 @@
+:turtle=:spd :minTurtle=:spd*-1 goto1
+
+// :spd   | ButtonState
+// ButtonOnStateValue   = 15
+// ButtonOffStateValue  = 100
+// ButtonStyle          = 2
+
+// Lever Speed Limiting
+// :minTurtle | LeverMinOutput (yaw, pitch)
+// :turtle    | LeverMaxOutput (throttle, yaw, pitch)

@@ -1,6 +1,14 @@
-if :scanner!=1 then :scan=0 :resources="Scanner\nOffline" goto 1 end
-if :scanout>0 then goto 3 end :scan=1 :resources="scanning..." goto 1
-:i=():scanout-1) :resources="\n"
-if i> -1 then :resources+=:material + "\n" :i-- goto 4 end
-:resources+="done."
-if :scanout>0 AND :i==-1 then goto 6 end goto 1
+ta="waiting..." tb="scanning..." tc=" Ore" td=" Crystal"
+if :scB==0 AND :scanout==0 then :resources=ta goto2 end
+if :scB==1 AND :scanout==0 then :resources=tb goto3 end
+:S=(:scanout-1) :resources="\n"
+if :S> -1 AND :scanout!=0 then goto7 end
+if :scanout>0 AND :S==-1 then goto5 end goto2
+:resources+=:material-tc-td+"\n "+:volume+"\n" :S-- goto5
+
+// :scA        | MPS Active (boolean)
+// :scB        | MPS Scan (boolean)
+// :scanout    | MPS scanResults (number)
+// :material   | MPS Material
+// :volume     | MPS Volume
+// :resources  | display panel

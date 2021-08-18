@@ -4,7 +4,7 @@ if :scB==1 AND :scanout==0 then :resources=tb goto3 end
 :S=(:scanout-1) :resources="\n"
 if :S> -1 AND :scanout!=0 then goto7 end
 if :scanout>0 AND :S==-1 then goto5 end goto2
-:resources+=:material-tc-td+"\n "+:volume+"\n" :S-- goto5
+:resources+=:material-tc-td+"\n "+:volume+"kv\n" :S-- goto5
 
 // :scA        | MPS Active (boolean)
 // :scB        | MPS Scan (boolean)

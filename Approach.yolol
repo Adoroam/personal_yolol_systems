@@ -5,7 +5,7 @@ if :RFdistance>distance then goto5 end
 if:RFdistance<1000 then :fcuforward=(:RFdistance*:spd)/1000 end
 if :approach==0 then goto4 end goto3
 
-//requires FCU System lever(0/:spd):fcuforward button(0/10):cruise
+//requires FCUSystem lever(0/:spd):fcuforward button(0/10):cruise
 //requires button(1/0):approach
 //requires button(100/20):spd
 //requires rangeFinder :RF :RFdistance

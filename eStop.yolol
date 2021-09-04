@@ -1,0 +1,5 @@
+if :kill then :cruise=10 :fcuforward=0 :spd=0 :shutdown=0 end goto1
+
+//requires button(0/1):kill
+//requires FCUSystem lever(0/:spd):fcuforward button(0/10):cruise
+//requires PowerSystem :shutdown

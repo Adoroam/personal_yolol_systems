@@ -1,0 +1,9 @@
+if :delta>200 AND :ovr==0 then :leak=1 :t1=0 goto1 end
+if :delta<200 AND :t1 then :leak=0 end goto1
+// may need to increase number if you use more propellant
+// replace :t1=0 with variable that shuts off all tanks
+
+//requires memorychipfield :delta
+//requires deltaP.yolol
+//requires gasNetworkStoredResource :propellant
+//requires gasNetworkMaxResource :propmax

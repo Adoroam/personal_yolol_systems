@@ -1,1 +1,4 @@
 :turtle=:spd :minTurtle=:spd*-1 goto1
+
+//requires button(100/20) :spd
+//requires lever(:minTurtle/:turtle) FCUlever

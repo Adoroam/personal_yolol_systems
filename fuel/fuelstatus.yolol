@@ -1,0 +1,8 @@
+f0="OK" f1="HALF" f2="LOW" m=:fuelmax
+if :fuel < m/2 then goto3 end goto4
+if :fuel < m/4 then :fs=f2 else :fs=f1 end goto1
+:fs=f0 goto1
+
+//requires memorychipfield :fs
+//requires fuelChamberFuel :fuel
+//requires fuelChamberMaxFuel :fuelmax

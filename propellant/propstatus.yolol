@@ -1,0 +1,11 @@
+p0="OK" p1="LEAK" p2="HALF" p3="LOW"
+if :leak==1 then :ps=p1 goto2 end
+if :propellant < :maxprop/2 then goto4 end goto5
+if :propellant < :maxprop/4 then :ps=p3 else :ps=p2 end goto2
+:ps=p0 goto2
+
+
+//requires memorychipfield :leak
+//requires memorychipfield :ps
+//requires gasNetworkStoredResource :propellant
+//requires gasNetworkMaxResource :propmax

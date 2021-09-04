@@ -1,27 +1,6 @@
-if :approach==1 then :prox=1 :spd=75 goto2 end goto1
-if :proxdistance>20 then goto4 end
-:cruise=10 :spd=20 :fcuforward=0 :approach=0 fcubackward=100 goto1
-if:proxdistance<1000 then :fcuforward=(:proxdistance*:spd)/1000 end
-if :approach==0 then goto3 end goto2
-
-// :approach   | ButtonState
-// ButtonOnStateValue   = 1
-// ButtonOffStateValue  = 0
-// ButtonStyle          = 1
-
-// :spd         | ButtonState
-// ButtonOnStateValue   = 15
-// ButtonOffStateValue  = 100
-// ButtonStyle          = 2
-
-// :cruise      | ButtonState
-// ButtonOnStateValue   = 0
-// ButtonOffStateValue  = 10
-// ButtonStyle          = 1
-
-// :fcuforward  | FCU
-// :fcubackward | FCU
-
-// RF RangeFinderSearchLength = 1000
-// :prox          | RF RangeFinderOnState
-// :proxdistance  | RF RangeFinderDistance
+spdmin=20 spdmax=75 distance=20
+if :approach==1 then :RF=1 :spd=spdmax goto3 end goto2
+if :RFdistance>distance then goto5 end
+:cruise=10 :spd=spdmin :fcuforward=0 :approach=0 goto2
+if:RFdistance<1000 then :fcuforward=(:RFdistance*:spd)/1000 end
+if :approach==0 then goto4 end goto3

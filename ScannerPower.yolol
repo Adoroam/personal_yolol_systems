@@ -1,8 +1,1 @@
-:scA=(:prox==1 AND :proxdistance<=100 AND :scanout==0) goto1
-
-// :scA           | MPS Active
-// :scanout       | MPS scanResults
-
-// RF RangeFinderSearchLength = 1000
-// :prox          | RF RangeFinderOnState
-// :proxdistance  | RF RangeFinderDistance
+:scA=(:RF==1 AND :RFdistance<=100 AND :scanout==0) goto1

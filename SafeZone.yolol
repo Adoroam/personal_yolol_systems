@@ -1,0 +1,2 @@
+dz="\nDangerZone!"
+if :sz==0 then :ss=dz else :ss="" end goto2

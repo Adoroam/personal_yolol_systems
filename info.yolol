@@ -1,6 +1,6 @@
 init=0 goto10
 if init then goto3 end goto10
-:info=p + :ps + f + :fs
+:info=:ss + p + :ps + f + :fs goto2
 goto2
 
 
@@ -8,11 +8,12 @@ goto2
 
 
 init=1 :info="\nbooting info system" d="."
+:info+=d  
 :info+=d  p="\nProp: "
 :info+=d  f="\nFuel: "
-:info+=d
 goto2
 
-//requires propstatus.yolol :ps
-//requires fuelstatus.yolol :fs
-//requires text or memorychipfield :info
+//  requires propstatus.yolol         :ps
+//  requires fuelstatus.yolol         :fs
+//  requires safezoneStatus.yolol     :ss
+//  requires text or memorychipfield  :info
